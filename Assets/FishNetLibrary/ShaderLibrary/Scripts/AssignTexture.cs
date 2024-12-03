@@ -53,7 +53,7 @@ public class AssignTexture : MonoBehaviour
         // 调度计算着色器的执行，传入计算组的大小
         // 这里假设每个工作组是 16x16
         // 简单的说就是，要分配多少个组，才能完成计算，目前只分了xy的各一半，因此只渲染了1/4的画面。
-        // DispatchShader(texResolution / 8, texResolution / 8);
+        DispatchShader(texResolution / 8, texResolution / 8);
     }
     private void DispatchShader(int x, int y)
     {
@@ -75,7 +75,7 @@ public class AssignTexture : MonoBehaviour
         //     // 如果按键 U 被松开，则重新调度计算着色器
         //     DispatchShader(texResolution / 8, texResolution / 8);
         // }
-        DispatchShader(texResolution/8, texResolution/8);
-        DispatchShader(1);
+        // DispatchShader(texResolution/8, texResolution/8);
+        // DispatchShader(1);
     }
 }
